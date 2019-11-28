@@ -1,5 +1,5 @@
 import React from 'react';
-import LanguageContext from '../context/LanguageContext';
+import LanguageContext from '../contexts/LanguageContext';
 
 class Button extends React.Component {
   // specific naming for context system
