@@ -3,8 +3,8 @@ import LanguageContext from '../contexts/LanguageContext';
 import ColorContext from '../contexts/ColorContext';
 
 class Button extends React.Component {
-  renderSubmitText(value) {
-    return value === 'english' ? 'Submit' : 'Elkuld'
+  renderSubmitText(language) {
+    return language === 'english' ? 'Submit' : 'Elkuld'
   };
 
   renderButton(color) {
@@ -12,7 +12,7 @@ class Button extends React.Component {
       <button className={`ui button ${color}`}>
         <LanguageContext.Consumer>
           {/** This function will be called by Consumer with the value inside the Pipe */}
-          {(value) => this.renderSubmitText(value)}
+          {({ language }) => this.renderSubmitText(language)}
         </LanguageContext.Consumer>
       </button>
     )
